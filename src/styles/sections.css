@@ -527,7 +527,7 @@
 
 .timeline-item {
     position: relative;
-    padding-left: 72px;
+    padding-left: 64px;
     margin-bottom: var(--space-xl);
 }
 
@@ -559,7 +559,7 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-lg);
-    padding: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--gold-alpha-20);
     text-align: left;
@@ -1051,10 +1051,10 @@
 /* ========== MUSIC TOGGLE ========== */
 .music-toggle {
     position: fixed;
-    bottom: 70px;
+    top: 24px;
     right: 16px;
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     border-radius: var(--radius-full);
     background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
     color: var(--night-deep);
@@ -1076,7 +1076,7 @@
 }
 
 .music-icon {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .music-visualizer {
@@ -1136,7 +1136,9 @@
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+}
 
+@media (min-width: 1024px) {
     .timeline-line {
         left: 50%;
         transform: translateX(-50%);
