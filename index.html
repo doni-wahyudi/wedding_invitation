@@ -59,7 +59,7 @@
     <!-- ========================================= -->
     <section id="bismillah" class="section bismillah-section">
       <div class="section-inner">
-        <div class="geometric-frame" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="geometric-frame" data-aos="fade-up" data-aos-duration="1000">
           <h2 class="arabic-text">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
           <p class="salam" data-aos="fade-up" data-aos-delay="200">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
           <div class="quran-verse" data-aos="fade-up" data-aos-delay="400">
@@ -446,10 +446,10 @@
           <div class="form-group">
             <label for="rsvp-attendance">Kehadiran</label>
             <select id="rsvp-attendance" required>
-              <option value="">-- Pilih --</option>
-              <option value="hadir">✅ Hadir</option>
-              <option value="tidak_hadir">❌ Tidak Hadir</option>
-              <option value="masih_ragu">🤔 Masih Ragu</option>
+              <option value="" disabled selected>-- Pilih --</option>
+              <option value="hadir">Hadir</option>
+              <option value="tidak_hadir">Tidak Hadir</option>
+              <option value="masih_ragu">Masih Ragu</option>
             </select>
           </div>
           <div class="form-group">
@@ -510,7 +510,7 @@
     <!-- ========================================= -->
     <section id="closing" class="section closing-section">
       <div class="section-inner">
-        <div class="closing-frame" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="closing-frame" data-aos="fade-up" data-aos-duration="1000">
           <div class="quran-verse" data-aos="fade-up" data-aos-delay="200">
             <p class="verse-arabic">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا
               لِلْمُتَّقِينَ إِمَامًا</p>
@@ -543,28 +543,15 @@
       <p class="footer-credits">© 2026 Doni & Despa</p>
     </footer>
 
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav" id="bottom-nav">
-      <a href="#bismillah" class="nav-item active" data-section="bismillah">
-        <span class="nav-icon">🏠</span>
-        <span class="nav-label">Home</span>
-      </a>
-      <a href="#event" class="nav-item" data-section="event">
-        <span class="nav-icon">📋</span>
-        <span class="nav-label">Acara</span>
-      </a>
-      <a href="#gallery" class="nav-item" data-section="gallery">
-        <span class="nav-icon">📷</span>
-        <span class="nav-label">Galeri</span>
-      </a>
-      <a href="#gifts" class="nav-item" data-section="gifts">
-        <span class="nav-icon">🎁</span>
-        <span class="nav-label">Hadiah</span>
-      </a>
-      <a href="#messages" class="nav-item" data-section="messages">
-        <span class="nav-icon">💌</span>
-        <span class="nav-label">Pesan</span>
-      </a>
+    <!-- Top Right Navigation -->
+    <nav class="top-nav" id="top-nav">
+      <div class="nav-menu" id="nav-menu">
+        <a href="#bismillah" class="nav-item active" data-section="bismillah">Home</a>
+        <a href="#event" class="nav-item" data-section="event">Acara</a>
+        <a href="#gallery" class="nav-item" data-section="gallery">Galeri</a>
+        <a href="#gifts" class="nav-item" data-section="gifts">Hadiah</a>
+        <a href="#messages" class="nav-item" data-section="messages">Pesan</a>
+      </div>
     </nav>
 
   </main>
@@ -579,6 +566,7 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script type="module" src="/src/js/main.js"></script>
 </body>
 

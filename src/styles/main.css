@@ -166,7 +166,8 @@ select {
 .section {
   min-height: auto;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: center;
   position: relative;
   overflow: hidden;
@@ -183,10 +184,11 @@ select {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: var(--space-lg) 12px;
+  padding: var(--space-lg) 8px;
   text-align: center;
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
 }
 
 /* ---------- Headings ---------- */
@@ -249,7 +251,7 @@ select {
 
 .bismillah-small {
   font-family: var(--font-arabic);
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--gold);
   direction: rtl;
   margin-bottom: var(--space-md);
@@ -394,18 +396,21 @@ select {
 .form-group textarea,
 .form-group select {
   width: 100%;
-  padding: 12px 16px;
+  padding: 14px 16px;
   border: 1px solid var(--white-alpha-15);
   border-radius: var(--radius-md);
-  background: var(--white-alpha-05);
+  background: rgba(11, 17, 32, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: var(--text-primary);
-  transition: border-color var(--transition-fast);
-  font-size: 0.9rem;
+  transition: all var(--transition-normal);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--text-muted);
+  color: var(--white-alpha-40);
 }
 
 .form-group input:focus,
@@ -413,16 +418,28 @@ select {
 .form-group select:focus {
   border-color: var(--gold);
   outline: none;
-  box-shadow: 0 0 0 3px var(--gold-alpha-20);
+  background: rgba(11, 17, 32, 0.6);
+  box-shadow: 0 0 15px rgba(212, 175, 97, 0.3);
+  transform: translateY(-2px);
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C9A84C'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 24px;
 }
 
 .form-group select option {
-  background: var(--night);
-  color: var(--text-primary);
+  background: var(--night-deep);
+  color: var(--gold-light);
+  padding: 12px;
 }
 
 .form-group textarea {
   resize: vertical;
+  min-height: 100px;
 }
 
 .form-status {
@@ -469,12 +486,13 @@ select {
 /* ---------- Responsive ---------- */
 @media (min-width: 768px) {
   .section-inner {
-    max-width: 560px;
-    padding: var(--space-3xl) var(--space-lg);
+    max-width: 90%;
+    max-width: min(90%, 720px);
+    padding: var(--space-2xl) var(--space-lg);
   }
 
   .geometric-frame {
-    padding: var(--space-2xl);
+    padding: var(--space-xl);
   }
 
   .section-heading {
@@ -488,6 +506,6 @@ select {
 
 @media (min-width: 1024px) {
   .section-inner {
-    max-width: 640px;
+    max-width: min(85%, 800px);
   }
 }

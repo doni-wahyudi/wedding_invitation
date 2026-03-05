@@ -254,6 +254,7 @@ function setupNavigation() {
     navItems.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
+
             const targetId = item.getAttribute('href').replace('#', '');
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
@@ -295,6 +296,21 @@ function setupCopyButtons() {
         const textToCopy = btn.getAttribute('data-copy');
         try {
             await navigator.clipboard.writeText(textToCopy);
+
+            // Fire confetti burst
+            if (typeof confetti === 'function') {
+                const rect = btn.getBoundingClientRect();
+                const x = (rect.left + rect.width / 2) / window.innerWidth;
+                const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+                confetti({
+                    particleCount: 40,
+                    spread: 60,
+                    origin: { x, y },
+                    colors: ['#C9A84C', '#D4AF61', '#ffffff']
+                });
+            }
+
             btn.classList.add('copied');
             const textSpan = btn.querySelector('.copy-text');
             const originalText = textSpan.textContent;
