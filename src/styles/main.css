@@ -240,7 +240,7 @@ select {
 /* ---------- Arabic Text ---------- */
 .arabic-text {
   font-family: var(--font-arabic);
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: var(--white);
   line-height: 1.8;
   direction: rtl;
@@ -272,7 +272,7 @@ select {
 
 .verse-arabic {
   font-family: var(--font-arabic);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--white);
   line-height: 2.2;
   direction: rtl;

@@ -15,6 +15,7 @@ export function initMusic() {
     audio = new Audio();
     // Example: audio.src = '/assets/audio/background-nasheed.mp3';
     // For now, we keep it empty - you can add your own nasheed audio file
+    audio.src = import.meta.env.BASE_URL + 'audio/Binks_Sake_Wed.mp3';
     audio.loop = true;
     audio.volume = 0.3;
 
