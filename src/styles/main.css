@@ -181,9 +181,9 @@ select {
 
 .section-inner {
   width: 100%;
-  max-width: 480px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: var(--space-3xl) var(--space-md);
+  padding: var(--space-2xl) var(--space-md);
   text-align: center;
   position: relative;
   z-index: 2;
@@ -470,7 +470,7 @@ select {
 @media (min-width: 768px) {
   .section-inner {
     max-width: 560px;
-    padding: var(--space-4xl) var(--space-lg);
+    padding: var(--space-3xl) var(--space-lg);
   }
 
   .geometric-frame {

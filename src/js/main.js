@@ -5,7 +5,7 @@
 import { initCountdown } from './countdown.js';
 import { initSupabase, loadMessages, submitMessage, submitRSVP, verifyGuest } from './supabase.js';
 import { initGallery } from './gallery.js';
-import { initMusic } from './music.js';
+import { initMusic, tryAutoPlay } from './music.js';
 import { initAnimations, createParticles } from './animations.js';
 
 // ---- Config ----
@@ -135,6 +135,7 @@ function initializeApp() {
 
     // Initialize music
     initMusic();
+    tryAutoPlay();
 
     // Initialize scroll animations
     initAnimations();
