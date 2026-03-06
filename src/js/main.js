@@ -120,7 +120,7 @@ function initializeApp() {
             easing: 'ease-out-cubic',
             once: true,
             offset: 50,
-            disable: false,
+            disable: 'mobile',
         });
     }
 

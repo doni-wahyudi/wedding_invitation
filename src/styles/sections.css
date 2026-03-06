@@ -349,16 +349,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-sm);
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .countdown-item {
     text-align: center;
+    min-width: 65px;
 }
 
 .countdown-flip {
-    width: 72px;
-    height: 85px;
+    width: 65px;
+    height: 75px;
     background: var(--gradient-glass);
     border: 1px solid var(--gold-alpha-30);
     border-radius: var(--radius-md);
@@ -797,8 +800,10 @@
 .gifts-cards {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--space-md);
     margin-bottom: var(--space-lg);
+    width: 100%;
 }
 
 .gift-card {
@@ -1138,15 +1143,23 @@
     position: fixed;
     top: 24px;
     right: 16px;
+    left: 16px;
     z-index: 999;
     animation: fadeNavIn 1s ease-out 1s both;
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
 }
 
 .nav-menu {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--space-sm);
+    justify-content: center;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
 }
 
 .nav-menu .nav-item {
@@ -1271,61 +1284,58 @@
 
 @media (max-width: 480px) {
     .nav-menu {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        padding-bottom: 4px;
-        /* for scrollbar */
-        justify-content: flex-start;
-        -ms-overflow-style: none;
-        /* IE/Edge */
-        scrollbar-width: none;
-        /* Firefox */
-    }
-
-    .nav-menu::-webkit-scrollbar {
-        display: none;
-        /* Chrome/Safari */
+        flex-wrap: wrap;
+        overflow-x: visible;
+        padding-bottom: 0;
+        justify-content: center;
+        gap: 6px;
     }
 
     .nav-menu .nav-item {
-        padding: 6px 10px;
-        font-size: 0.75rem;
+        padding: 5px 8px;
+        font-size: 0.7rem;
         white-space: nowrap;
+        background: rgba(11, 17, 32, 0.9);
     }
 
     .top-nav {
-        top: 16px;
-        right: 12px;
-        left: 12px;
+        top: 10px;
+        right: 8px;
+        left: 8px;
+        width: auto;
     }
 
     .timeline-item {
-        padding-left: 50px;
+        padding-left: 45px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .timeline-dot {
-        width: 40px;
-        height: 40px;
-        top: 12px;
-        left: 3px;
+        width: 36px;
+        height: 36px;
+        top: 10px;
+        left: 5px;
     }
 
     .timeline-dot img {
-        width: 60%;
-        height: 60%;
-        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .timeline-line {
-        left: 22px;
+        left: 23px;
     }
 
     .timeline-card {
-        padding: var(--space-md);
+        padding: var(--space-sm);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .timeline-title {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 }
 
