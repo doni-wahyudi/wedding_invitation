@@ -1229,6 +1229,66 @@
     }
 }
 
+@media (max-width: 480px) {
+    .nav-menu {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        /* for scrollbar */
+        justify-content: flex-start;
+        -ms-overflow-style: none;
+        /* IE/Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .nav-menu::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari */
+    }
+
+    .nav-menu .nav-item {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .top-nav {
+        top: 16px;
+        right: 12px;
+        left: 12px;
+    }
+
+    .timeline-item {
+        padding-left: 50px;
+    }
+
+    .timeline-dot {
+        width: 40px;
+        height: 40px;
+        top: 12px;
+        left: 3px;
+    }
+
+    .timeline-dot img {
+        width: 60%;
+        height: 60%;
+        object-fit: contain;
+    }
+
+    .timeline-line {
+        left: 22px;
+    }
+
+    .timeline-card {
+        padding: var(--space-md);
+    }
+
+    .timeline-title {
+        font-size: 1rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .timeline-line {
         left: 50%;
