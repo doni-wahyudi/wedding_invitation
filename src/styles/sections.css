@@ -72,6 +72,13 @@
     position: relative;
 }
 
+@media (max-width: 480px) {
+    .cover-title .ampersand {
+        font-size: 4rem;
+        margin: -30px 0;
+    }
+}
+
 .cover-title>span {
     position: relative;
     z-index: 1;
@@ -221,6 +228,11 @@
     margin-bottom: var(--space-lg);
     text-align: center;
     transition: border-color var(--transition-normal);
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .couple-card:hover {
@@ -415,6 +427,11 @@
     padding: var(--space-xl);
     text-align: center;
     transition: all var(--transition-normal);
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .event-card:hover {
@@ -553,6 +570,9 @@
     position: relative;
     padding-left: 64px;
     margin-bottom: var(--space-xl);
+    width: 100%;
+    max-width: 480px;
+    box-sizing: border-box;
 }
 
 @keyframes pulseTimelineDot {
@@ -793,6 +813,11 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .gift-card::before {
@@ -873,6 +898,11 @@
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     text-align: center;
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .gift-address h4 {
@@ -901,6 +931,11 @@
     border: 1px solid var(--gold-alpha-20);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 
@@ -916,6 +951,11 @@
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     margin-bottom: var(--space-xl);
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .messages-feed {
