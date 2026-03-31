@@ -6,18 +6,17 @@ import { initCountdown } from './countdown.js';
 import { initSupabase, loadMessages, submitMessage, submitRSVP, verifyGuest } from './supabase.js';
 import { initGallery } from './gallery.js';
 import { initMusic, tryAutoPlay } from './music.js';
-import { initAnimations, createParticles } from './animations.js';
+import { initAnimations } from './animations.js';
 
 // ---- Config ----
-const WEDDING_DATE = '2026-08-15T08:00:00+07:00';
+const WEDDING_DATE = '2026-06-10T08:00:00+07:00';
 
 // ---- Initialize App ----
 document.addEventListener('DOMContentLoaded', async () => {
     // Initialize Supabase first (needed for guest verification)
     initSupabase();
 
-    // Create particles on cover
-    createParticles('cover-particles', 25);
+
 
     // Verify guest from URL parameter
     await verifyAndPersonalize();
@@ -129,9 +128,6 @@ function initializeApp() {
 
     // Load messages
     loadMessages();
-
-    // Initialize gallery
-    initGallery();
 
     // Initialize music
     initMusic();

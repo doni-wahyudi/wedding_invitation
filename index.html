@@ -7,7 +7,7 @@
   <meta name="description"
     content="Undangan Pernikahan Doni & Despa - Kami mengundang Anda untuk merayakan hari bahagia kami" />
   <meta name="theme-color" content="#0D4D2B" />
-  <title>The Wedding of Doni & Despa</title>
+  <title>Undangan Pernikahan Doni & Despa</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,6 +22,20 @@
   <link rel="stylesheet" href="/src/styles/main.css" />
   <link rel="stylesheet" href="/src/styles/animations.css" />
   <link rel="stylesheet" href="/src/styles/sections.css" />
+  <style>
+    .event-card-icon {
+      display: block;
+      margin: 0 auto 15px;
+      height: auto;
+      object-fit: contain;
+    }
+    .akad-nikah-icon {
+      width: 70px !important;
+    }
+    .walimatul-urs-icon {
+      width: 90px !important; /* Larger to compensate for internal whitespace */
+    }
+  </style>
 </head>
 
 <body>
@@ -34,17 +48,14 @@
     <div class="cover-content">
       <div class="islamic-ornament-top"></div>
       <p class="bismillah-small">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
-      <h3 class="cover-subtitle">The Wedding Of</h3>
+      <h3 class="cover-subtitle">Pernikahan Dari</h3>
       <h1 class="cover-title">Doni<span class="ampersand">&</span>Despa</h1>
-      <div class="cover-couple-img">
-        <img src="/images/cover-couple.png" alt="" />
-      </div>
+
       <div class="cover-guest">
         <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
         <p class="guest-name" id="guest-name">Tamu Undangan</p>
       </div>
       <button class="open-invitation-btn" id="open-btn">
-        <span class="btn-icon">💌</span>
         <span>Buka Undangan</span>
       </button>
       <div class="islamic-ornament-bottom"></div>
@@ -82,16 +93,13 @@
       <div class="section-inner">
         <h2 class="section-heading" data-aos="fade-up">
           <span class="heading-ornament left"></span>
-          Bride & Groom
+          Kedua Mempelai
           <span class="heading-ornament right"></span>
         </h2>
 
         <!-- Bride -->
         <div class="couple-card bride-card" data-aos="fade-right" data-aos-duration="800">
-          <div class="couple-photo-frame">
-            <img src="/images/bride.png" alt="Foto Pengantin Wanita"
-              style="width:100%; height:100%; object-fit:cover;" />
-          </div>
+
           <h3 class="couple-name">Despa Putri Lestari</h3>
           <p class="couple-parent">Putri dari<br />Bapak Paisal Yusip &<br />Ibu Enny Yusnida</p>
           <a href="https://instagram.com" class="instagram-link" target="_blank" rel="noopener">
@@ -109,9 +117,7 @@
 
         <!-- Groom -->
         <div class="couple-card groom-card" data-aos="fade-left" data-aos-duration="800">
-          <div class="couple-photo-frame">
-            <img src="/images/groom.png" alt="Foto Pengantin Pria" style="width:100%; height:100%; object-fit:cover;" />
-          </div>
+
           <h3 class="couple-name">Doni Wahyudi</h3>
           <p class="couple-parent">Putra dari<br />Bapak Masdianto &<br />Ibu Desniati</p>
           <a href="https://instagram.com" class="instagram-link" target="_blank" rel="noopener">
@@ -135,7 +141,7 @@
           Menuju Hari Bahagia
           <span class="heading-ornament right"></span>
         </h2>
-        <p class="countdown-subtitle" data-aos="fade-up" data-aos-delay="100">Sabtu, 15 Agustus 2026</p>
+        <p class="countdown-subtitle" data-aos="fade-up" data-aos-delay="100">Rabu, 10 Juni 2026</p>
         <div class="countdown-timer" id="countdown-timer" data-aos="zoom-in" data-aos-delay="200">
           <div class="countdown-item">
             <div class="countdown-flip">
@@ -184,13 +190,15 @@
         <div class="event-cards">
           <!-- Akad Nikah -->
           <div class="event-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="event-icon">🕌</div>
+            <div class="event-icon">
+              <img src="/images/akad_nikah_icon.png" alt="Akad Nikah" class="event-card-icon akad-nikah-icon" />
+            </div>
             <h3 class="event-name">Akad Nikah</h3>
             <div class="event-divider"></div>
             <div class="event-detail">
               <div class="event-detail-item">
                 <span class="event-detail-icon">📅</span>
-                <span>Sabtu, 15 Agustus 2026</span>
+                <span>Rabu, 10 Juni 2026</span>
               </div>
               <div class="event-detail-item">
                 <span class="event-detail-icon">🕐</span>
@@ -198,20 +206,22 @@
               </div>
               <div class="event-detail-item">
                 <span class="event-detail-icon">📍</span>
-                <span>Masjid Al-Ikhlas<br />Jl. Kebahagiaan No. 1, Jakarta Selatan</span>
+                <span>Masjid Al-Mukarromah<br />XQCJ+385, Kerbang Dalam, Kec. Pesisir Utara, Kabupaten Lampung Barat</span>
               </div>
             </div>
           </div>
 
           <!-- Walimatul Urs -->
           <div class="event-card" data-aos="fade-up" data-aos-delay="400">
-            <div class="event-icon">🎊</div>
+            <div class="event-icon">
+              <img src="/images/walimatul_urs_icon.png" alt="Walimatul Urs" class="event-card-icon walimatul-urs-icon" />
+            </div>
             <h3 class="event-name">Walimatul Urs</h3>
             <div class="event-divider"></div>
             <div class="event-detail">
               <div class="event-detail-item">
                 <span class="event-detail-icon">📅</span>
-                <span>Sabtu, 15 Agustus 2026</span>
+                <span>Rabu, 10 Juni 2026</span>
               </div>
               <div class="event-detail-item">
                 <span class="event-detail-icon">🕐</span>
@@ -219,7 +229,7 @@
               </div>
               <div class="event-detail-item">
                 <span class="event-detail-icon">📍</span>
-                <span>Gedung Serbaguna Al-Hikmah<br />Jl. Kebahagiaan No. 1, Jakarta Selatan</span>
+                <span>Masjid Al-Mukarromah<br />XQCJ+385, Kerbang Dalam, Kec. Pesisir Utara, Kabupaten Lampung Barat</span>
               </div>
             </div>
           </div>
@@ -239,12 +249,12 @@
         </h2>
         <div class="maps-container" data-aos="zoom-in" data-aos-delay="200">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2654126365!2d106.82715787461788!3d-6.225028093770536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e3b1a0e3c7%3A0x301576d14feb9d0!2sMonas!5e0!3m2!1sid!2sid!4v1709000000000!5m2!1sid!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d993.6136414055592!2d103.7813038!3d-5.0297826!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e47f1763f462565%3A0xcddf184beafa8ac1!2sMasjid%20Al-Mukarromah!5e0!3m2!1sid!2sid!4v1774950693835!5m2!1sid!2sid"
             width="100%" height="300" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
-        <a href="https://maps.google.com" target="_blank" rel="noopener" class="maps-btn" data-aos="fade-up"
+        <a href="https://maps.app.goo.gl/xMrddVMgcxrRkid29" target="_blank" rel="noopener" class="maps-btn" data-aos="fade-up"
           data-aos-delay="300">
           <span>📍</span> Buka di Google Maps
         </a>
@@ -268,52 +278,65 @@
           <div class="timeline-line"></div>
 
           <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
-            <div class="timeline-dot">
-              <img src="/images/story-meeting.png" alt="" />
-            </div>
+            <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <span class="timeline-date">2022</span>
-              <h4 class="timeline-title">Pertama Bertemu</h4>
-              <p class="timeline-desc">Kami dipertemukan oleh Allah di sebuah acara pengajian. Saat itu kami tidak
-                menyangka bahwa pertemuan sederhana itu akan menjadi awal dari kisah indah yang Allah tuliskan untuk
-                kami.</p>
+              <span class="timeline-date">25 Nov 2025</span>
+              <h4 class="timeline-title">Awal Kisah</h4>
+              <p class="timeline-desc">Sebuah kabar baik datang dari seorang teman, membawa secercah harapan tentang sosok yang juga tengah mencari pendamping hidup. Menjadi awal dari skenario indah yang Allah persiapkan.</p>
             </div>
           </div>
 
           <div class="timeline-item right" data-aos="fade-left" data-aos-delay="300">
-            <div class="timeline-dot">
-              <img src="/images/story-closer.png" alt="" />
-            </div>
+            <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <span class="timeline-date">2023</span>
-              <h4 class="timeline-title">Mengenal Lebih Dekat</h4>
-              <p class="timeline-desc">Melalui proses ta'aruf yang dijembatani oleh keluarga, kami mulai saling mengenal
-                satu sama lain. Semakin kami mengenal, semakin kami yakin bahwa ini adalah jawaban dari doa kami.</p>
+              <span class="timeline-date">24 Jan 2026</span>
+              <h4 class="timeline-title">Niat yang Tulus</h4>
+              <p class="timeline-desc">Melalui perantara, niat suci untuk saling mengenal secara ta'aruf disampaikan. Sebuah langkah awal yang penuh doa dan harapan akan ridho-Nya.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
-            <div class="timeline-dot">
-              <img src="/images/story-proposal.png" alt="" />
-            </div>
+            <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <span class="timeline-date">Awal 2025</span>
-              <h4 class="timeline-title">Khitbah</h4>
-              <p class="timeline-desc">Dengan restu kedua keluarga dan memohon ridho Allah, kami resmi melangsungkan
-                khitbah. Alhamdulillah, satu langkah lagi menuju kehidupan baru yang kami impikan.</p>
+              <span class="timeline-date">29 Jan 2026</span>
+              <h4 class="timeline-title">Saling Mengenal</h4>
+              <p class="timeline-desc">Bertukar biodata (CV) untuk mengenal lebih jauh dalam bingkai syariat. Mencari keselarasan visi dan misi untuk membangun mahligai rumah tangga.</p>
             </div>
           </div>
 
           <div class="timeline-item right" data-aos="fade-left" data-aos-delay="500">
-            <div class="timeline-dot">
-              <img src="/images/story-wedding.png" alt="" />
-            </div>
+            <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <span class="timeline-date">15 Agustus 2026</span>
-              <h4 class="timeline-title">Akad Nikah</h4>
-              <p class="timeline-desc">Insya Allah, kami akan menyempurnakan separuh agama kami. Mohon doa restu dari
-                seluruh keluarga dan sahabat agar pernikahan kami menjadi pernikahan yang sakinah, mawaddah, wa rahmah.
-              </p>
+              <span class="timeline-date">7 Feb 2026</span>
+              <h4 class="timeline-title">Pertemuan (Nadzor)</h4>
+              <p class="timeline-desc">Allah mudahkan kami untuk bertemu langsung (nadzor) pertama kalinya di Bandar Lampung dengan didampingi mahram. Berdiskusi dan memantapkan hati dalam keyakinan yang sama.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="600">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">27 Feb 2026</span>
+              <h4 class="timeline-title">Restu Keluarga</h4>
+              <p class="timeline-desc">Silaturahmi berlanjut dengan pertemuan bersama keluarga besar di Bandar Lampung. Mempererat ukhuwah dan memohon restu orang tua untuk langkah selanjutnya.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="700">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">28 Mar 2026</span>
+              <h4 class="timeline-title">Khitbah (Lamaran)</h4>
+              <p class="timeline-desc">Menempuh perjalanan menuju Krui untuk menyampaikan maksud hati secara resmi. Alhamdulillah, niat tulus diterima dengan hangat oleh keluarga besar perempuan.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="800">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">10 Juni 2026</span>
+              <h4 class="timeline-title">Ikatan Suci</h4>
+              <p class="timeline-desc">Di hari ini, kami menyempurnakan ibadah terpanjang dalam ikatan suci pernikahan. Memulai perjalanan baru sebagai pasangan yang sakinah, mawaddah, wa rahmah.</p>
             </div>
           </div>
         </div>
@@ -323,108 +346,12 @@
     <!-- ========================================= -->
     <!-- SECTION 7: PHOTO GALLERY                  -->
     <!-- ========================================= -->
-    <section id="gallery" class="section gallery-section">
-      <div class="section-inner">
-        <h2 class="section-heading" data-aos="fade-up">
-          <span class="heading-ornament left"></span>
-          Galeri Foto
-          <span class="heading-ornament right"></span>
-        </h2>
-        <p class="section-desc" data-aos="fade-up" data-aos-delay="100">"Mencintai bukan untuk menyamai, tetapi
-          keikhlasan menerima perbedaan"</p>
 
-        <div class="gallery-grid" id="gallery-grid">
-          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-            <div class="gallery-placeholder">
-              <span>📸</span>
-              <p>Photo 1</p>
-            </div>
-          </div>
-          <div class="gallery-item tall" data-aos="zoom-in" data-aos-delay="200">
-            <div class="gallery-placeholder">
-              <span>📸</span>
-              <p>Photo 2</p>
-            </div>
-          </div>
-          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-            <div class="gallery-placeholder">
-              <span>📸</span>
-              <p>Photo 3</p>
-            </div>
-          </div>
-          <div class="gallery-item wide" data-aos="zoom-in" data-aos-delay="400">
-            <div class="gallery-placeholder">
-              <span>📸</span>
-              <p>Photo 4</p>
-            </div>
-          </div>
-          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
-            <div class="gallery-placeholder">
-              <span>📸</span>
-              <p>Photo 5</p>
-            </div>
-          </div>
-          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
-            <div class="gallery-placeholder">
-              <span>📸</span>
-              <p>Photo 6</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Lightbox Modal -->
-      <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightbox-close">&times;</button>
-        <div class="lightbox-content">
-          <img id="lightbox-img" src="" alt="Gallery Photo" />
-        </div>
-      </div>
-    </section>
 
     <!-- ========================================= -->
     <!-- SECTION 8: WEDDING GIFTS                  -->
     <!-- ========================================= -->
-    <section id="gifts" class="section gifts-section">
-      <div class="section-inner">
-        <h2 class="section-heading" data-aos="fade-up">
-          <span class="heading-ornament left"></span>
-          Wedding Gifts
-          <span class="heading-ornament right"></span>
-        </h2>
-        <p class="section-desc" data-aos="fade-up" data-aos-delay="100">Doa restu Anda merupakan karunia yang sangat
-          berarti bagi kami. Jika memberi adalah ungkapan tanda kasih, Anda dapat memberi melalui:</p>
 
-        <div class="gifts-cards">
-          <div class="gift-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="gift-bank-logo">🏦</div>
-            <h4 class="gift-bank-name">Bank Syariah Indonesia</h4>
-            <p class="gift-account-number" id="account-1">1234 5678 9012</p>
-            <p class="gift-account-holder">a/n Ahmad Fauzan</p>
-            <button class="copy-btn" data-copy="123456789012" onclick="copyToClipboard(this)">
-              <span class="copy-icon">📋</span>
-              <span class="copy-text">Salin</span>
-            </button>
-          </div>
-
-          <div class="gift-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="gift-bank-logo">🏦</div>
-            <h4 class="gift-bank-name">Bank Mandiri</h4>
-            <p class="gift-account-number" id="account-2">9876 5432 1098</p>
-            <p class="gift-account-holder">a/n Fatimah Azzahra</p>
-            <button class="copy-btn" data-copy="987654321098" onclick="copyToClipboard(this)">
-              <span class="copy-icon">📋</span>
-              <span class="copy-text">Salin</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="gift-address" data-aos="fade-up" data-aos-delay="400">
-          <h4>📦 Kirim Kado</h4>
-          <p>Jl. Kebahagiaan No. 1, RT 01/RW 02<br />Kel. Bahagia, Kec. Sejahtera<br />Jakarta Selatan, 12345</p>
-        </div>
-      </div>
-    </section>
 
     <!-- ========================================= -->
     <!-- SECTION 9: RSVP                           -->
@@ -539,25 +466,25 @@
     <!-- FOOTER                                    -->
     <!-- ========================================= -->
     <footer class="footer" data-aos="fade-up">
-      <p>Made with ❤️ and du'a</p>
+      <p>Dibuat dengan ❤️ dan doa</p>
       <p class="footer-credits">© 2026 Doni & Despa</p>
     </footer>
 
     <!-- Top Right Navigation -->
     <nav class="top-nav" id="top-nav">
       <div class="nav-menu" id="nav-menu">
-        <a href="#bismillah" class="nav-item active" data-section="bismillah">Home</a>
+        <a href="#bismillah" class="nav-item active" data-section="bismillah">Beranda</a>
         <a href="#event" class="nav-item" data-section="event">Acara</a>
-        <a href="#gallery" class="nav-item" data-section="gallery">Galeri</a>
-        <a href="#gifts" class="nav-item" data-section="gifts">Hadiah</a>
+
+
         <a href="#messages" class="nav-item" data-section="messages">Pesan</a>
       </div>
     </nav>
 
   </main>
 
-  <!-- Music Toggle Button -->
-  <button class="music-toggle" id="music-toggle" title="Toggle Music">
+  <!-- Kontrol Musik -->
+  <button class="music-toggle" id="music-toggle" title="Putar Musik">
     <span class="music-icon" id="music-icon">🔇</span>
     <div class="music-visualizer" id="music-visualizer">
       <span></span><span></span><span></span><span></span>

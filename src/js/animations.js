@@ -14,24 +14,7 @@ export function initAnimations() {
     setupCountdownFlip();
 }
 
-// ---- Create Floating Particles ----
-export function createParticles(containerId, count = 20) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
 
-    for (let i = 0; i < count; i++) {
-        const particle = document.createElement('div');
-        particle.className = `particle ${Math.random() > 0.6 ? 'star' : ''}`;
-        particle.style.left = `${Math.random() * 100}%`;
-        particle.style.top = `${Math.random() * 100}%`;
-        particle.style.animationDuration = `${6 + Math.random() * 10}s`;
-        particle.style.animationDelay = `${Math.random() * 8}s`;
-        particle.style.width = `${3 + Math.random() * 5}px`;
-        particle.style.height = particle.style.width;
-        particle.style.opacity = `${0.3 + Math.random() * 0.5}`;
-        container.appendChild(particle);
-    }
-}
 
 // ---- Scroll-Triggered Reveal ----
 function setupScrollReveal() {
@@ -43,7 +26,6 @@ function setupScrollReveal() {
         { selector: '.event-card', animation: 'fadeUp', stagger: 0.15 },
         { selector: '.timeline-item', animation: 'fadeUp', stagger: 0.12 },
         { selector: '.gift-card', animation: 'fadeUp', stagger: 0.1 },
-        { selector: '.gallery-item', animation: 'fadeUp', stagger: 0.05 },
         { selector: '.geometric-frame', animation: 'fadeUp' },
         { selector: '.closing-frame', animation: 'fadeUp' },
         { selector: '.rsvp-form', animation: 'fadeUp' },
