@@ -74,13 +74,13 @@
   --radius-2xl: 32px;
   --radius-full: 50%;
 
-  /* Shadows — soft and warm */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
-  --shadow-card: 0 2px 20px rgba(140, 123, 108, 0.1);
-  --shadow-taupe: 0 4px 20px rgba(175, 158, 143, 0.25);
-  --shadow-rose: 0 4px 20px rgba(212, 165, 165, 0.2);
+  /* Shadows — soft and warm, floating effect */
+  --shadow-sm: 0 4px 12px rgba(175, 158, 143, 0.05);
+  --shadow-md: 0 8px 24px rgba(175, 158, 143, 0.08);
+  --shadow-lg: 0 16px 48px rgba(175, 158, 143, 0.12);
+  --shadow-card: 0 10px 40px rgba(175, 158, 143, 0.08);
+  --shadow-taupe: 0 8px 32px rgba(175, 158, 143, 0.2);
+  --shadow-rose: 0 8px 32px rgba(212, 165, 165, 0.15);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -108,7 +108,8 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--text-dark);
-  background: var(--ivory);
+  background: var(--ivory) url('/images/bg_paper_texture.png') repeat;
+  background-size: 400px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -348,9 +349,10 @@ select {
 
 /* ---------- Card Base ---------- */
 .glass-card {
-  background: var(--white);
-  border: 1px solid var(--taupe-alpha-20);
-  border-radius: var(--radius-lg);
+  background: url('/images/bg_card_texture.png') center/100% 100% no-repeat;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-xl);
   padding: var(--space-xl);
   box-shadow: var(--shadow-card);
 }
@@ -362,7 +364,7 @@ select {
   justify-content: center;
   gap: var(--space-sm);
   padding: 14px 32px;
-  background: var(--taupe);
+  background: linear-gradient(135deg, var(--taupe), var(--taupe-dark));
   color: var(--white);
   border: none;
   border-radius: var(--radius-2xl);

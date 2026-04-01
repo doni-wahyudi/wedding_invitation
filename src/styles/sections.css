@@ -100,10 +100,10 @@
 /* Floral corner decorations */
 .cover-floral-top {
     position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 55%;
-    max-width: 280px;
+    top: -15px;
+    left: -15px;
+    width: 65%;
+    max-width: 320px;
     z-index: 2;
     pointer-events: none;
     opacity: 0.9;
@@ -111,10 +111,10 @@
 
 .cover-floral-bottom {
     position: absolute;
-    bottom: -10px;
-    right: -10px;
-    width: 55%;
-    max-width: 280px;
+    bottom: -15px;
+    right: -15px;
+    width: 65%;
+    max-width: 320px;
     z-index: 2;
     pointer-events: none;
     opacity: 0.9;
@@ -274,7 +274,7 @@
 
 /* ========== BISMILLAH SECTION ========== */
 .bismillah-section {
-    background: var(--ivory);
+    background: transparent;
     position: relative;
 }
 
@@ -290,7 +290,7 @@
 
 /* ========== COUPLE SECTION ========== */
 .couple-section {
-    background: var(--ivory-warm);
+    background: rgba(245, 240, 232, 0.4);
     position: relative;
     overflow: hidden;
 }
@@ -308,8 +308,9 @@
 }
 
 .couple-card {
-    background: var(--white);
-    border: 1px solid var(--taupe-alpha-20);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: url('/images/bg_card_texture.png') center/100% 100% no-repeat;
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl) var(--space-lg);
     margin-bottom: var(--space-lg);
@@ -370,9 +371,10 @@
 
 .couple-parent {
     font-family: var(--font-heading);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+    font-style: italic;
     color: var(--text-medium);
-    line-height: 1.8;
+    line-height: 2;
     margin-bottom: var(--space-md);
 }
 
@@ -383,7 +385,9 @@
     color: var(--taupe);
     font-size: 0.85rem;
     padding: 6px 16px;
-    border: 1px solid var(--taupe-alpha-30);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: url('/images/bg_card_texture.png') center/100% 100% no-repeat;
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-2xl);
     transition: all var(--transition-normal);
 }
@@ -400,21 +404,37 @@
 }
 
 .couple-divider {
-    text-align: center;
-    margin: var(--space-sm) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: var(--space-xl) 0;
+}
+
+.couple-divider::before,
+.couple-divider::after {
+    content: '';
+    height: 1px;
+    width: 60px;
+    background: linear-gradient(to right, transparent, var(--taupe));
+}
+
+.couple-divider::after {
+    background: linear-gradient(to left, transparent, var(--taupe));
 }
 
 .divider-ornament {
     font-family: var(--font-script);
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--taupe);
-    font-style: italic;
+    line-height: 1;
+    font-weight: 400;
 }
 
 
 /* ========== COUNTDOWN SECTION ========== */
 .countdown-section {
-    background: var(--ivory);
+    background: transparent;
     position: relative;
 }
 
@@ -483,7 +503,7 @@
 
 /* ========== EVENT SECTION ========== */
 .event-section {
-    background: var(--ivory-warm);
+    background: rgba(245, 240, 232, 0.4);
     position: relative;
 }
 
@@ -505,8 +525,9 @@
 }
 
 .event-card {
-    background: var(--white);
-    border: 1px solid var(--taupe-alpha-20);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: url('/images/bg_card_texture.png') center/100% 100% no-repeat;
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     text-align: center;
@@ -525,8 +546,15 @@
 }
 
 .event-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--space-md);
+    width: 60px;
+    height: 60px;
+    margin: 0 auto var(--space-md);
+    color: var(--taupe);
+}
+
+.event-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 .event-name {
@@ -567,7 +595,7 @@
 
 /* ========== LOCATION SECTION ========== */
 .location-section {
-    background: var(--ivory);
+    background: transparent;
     position: relative;
 }
 
@@ -608,7 +636,7 @@
 
 /* ========== LOVE STORY SECTION ========== */
 .story-section {
-    background: var(--ivory-warm);
+    background: rgba(245, 240, 232, 0.4);
     position: relative;
 }
 
@@ -646,36 +674,25 @@
 
 .timeline-dot {
     position: absolute;
-    left: 1px;
-    top: 8px;
-    width: 52px;
-    height: 52px;
-    border-radius: var(--radius-full);
-    background: var(--white);
-    border: 2px solid var(--dusty-rose);
-    box-shadow: var(--shadow-rose);
+    left: -1px;
+    top: 6px;
+    width: 54px;
+    height: 54px;
+    background: transparent url('/images/icon_flower_dot.png') center/contain no-repeat;
     z-index: 1;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: all var(--transition-gentle);
-}
-
-.timeline-dot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    opacity: 0.95;
+    filter: drop-shadow(0 4px 8px rgba(212, 165, 165, 0.3));
 }
 
 .timeline-item:hover .timeline-dot {
-    transform: scale(1.08);
-    border-color: var(--dusty-rose-dark);
-    box-shadow: 0 4px 20px rgba(212, 165, 165, 0.35);
+    transform: scale(1.15) rotate(8deg);
+    opacity: 1;
+    filter: drop-shadow(0 6px 16px rgba(212, 165, 165, 0.5));
 }
 
 .timeline-card {
-    background: var(--white);
+    background: url('/images/bg_card_texture.png') center/100% 100% no-repeat;
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
     box-shadow: var(--shadow-card);
@@ -717,7 +734,7 @@
 
 /* ========== GIFTS SECTION ========== */
 .gifts-section {
-    background: var(--ivory);
+    background: transparent;
     position: relative;
 }
 
@@ -731,8 +748,9 @@
 }
 
 .gift-card {
-    background: var(--white);
-    border: 1px solid var(--taupe-alpha-20);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: url('/images/bg_card_texture.png') center/100% 100% no-repeat;
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     text-align: left;
@@ -786,7 +804,9 @@
     gap: var(--space-xs);
     padding: 8px 20px;
     background: var(--cream);
-    border: 1px solid var(--taupe-alpha-30);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: url('/images/bg_card_texture.png') center/100% 100% no-repeat;
+    backdrop-filter: blur(10px);
     color: var(--taupe-dark);
     border-radius: var(--radius-2xl);
     font-size: 0.8rem;
@@ -806,8 +826,9 @@
 }
 
 .gift-address {
-    background: var(--white);
-    border: 1px solid var(--taupe-alpha-20);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: url('/images/bg_card_texture.png') center/100% 100% no-repeat;
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     text-align: center;
@@ -835,12 +856,13 @@
 
 /* ========== RSVP SECTION ========== */
 .rsvp-section {
-    background: var(--ivory);
+    background: rgba(245, 240, 232, 0.4);
 }
 
 .rsvp-form {
-    background: var(--white);
-    border: 1px solid var(--taupe-alpha-20);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: url('/images/bg_card_texture.png') center/100% 100% no-repeat;
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     width: 100%;
@@ -854,7 +876,7 @@
 
 /* ========== MESSAGES SECTION ========== */
 .messages-section {
-    background: var(--ivory-warm);
+    background: transparent;
     padding: var(--space-3xl) 0;
     position: relative;
 }
@@ -869,8 +891,9 @@
 }
 
 .message-form {
-    background: var(--white);
-    border: 1px solid var(--taupe-alpha-20);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: url('/images/bg_card_texture.png') center/100% 100% no-repeat;
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     margin-bottom: var(--space-xl);
@@ -952,12 +975,14 @@
 
 /* ========== CLOSING SECTION ========== */
 .closing-section {
-    background: var(--ivory);
+    background: rgba(245, 240, 232, 0.4);
     padding: var(--space-3xl) 0;
 }
 
 .closing-frame {
-    border: 1px solid var(--taupe-alpha-30);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl) var(--space-lg);
     background: rgba(255, 255, 255, 0.8);
