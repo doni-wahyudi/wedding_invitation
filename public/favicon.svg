@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" fill="#FAF9F6" rx="24"/>
+  
+  <!-- Huruf D pertama (Taupe) -->
+  <text x="18" y="84" font-family="Georgia, serif" font-size="68" font-style="italic" fill="#AF9E8F">D</text>
+  
+  <!-- Simbol Dan (Sage Green) -->
+  <text x="48" y="72" font-family="Georgia, serif" font-size="32" fill="#A8B5A0">&amp;</text>
+  
+  <!-- Huruf D kedua (Dusty Rose) -->
+  <text x="65" y="84" font-family="Georgia, serif" font-size="68" font-style="italic" fill="#D4A5A5">D</text>
+</svg>
