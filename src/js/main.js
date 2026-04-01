@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initialize Supabase first (needed for guest verification)
     initSupabase();
 
-
-
     // Verify guest from URL parameter
     await verifyAndPersonalize();
 });
@@ -70,10 +68,10 @@ function showNotInvited(coverContent, coverGuestEl, openBtn) {
     if (coverGuestEl) {
         coverGuestEl.innerHTML = `
             <div class="not-invited-message">
-                <p style="color: var(--gold-light); font-size: 0.9rem; margin-bottom: 8px;">
+                <p style="color: var(--text-medium); font-size: 0.9rem; margin-bottom: 8px;">
                     Maaf, undangan ini bersifat pribadi.
                 </p>
-                <p style="color: var(--white-alpha-40); font-size: 0.8rem;">
+                <p style="color: var(--text-light); font-size: 0.8rem;">
                     Silakan gunakan link undangan yang telah diberikan kepada Anda.
                 </p>
             </div>
@@ -105,21 +103,21 @@ function setupCover() {
                 if (bismillah) {
                     bismillah.scrollIntoView({ behavior: 'smooth' });
                 }
-            }, 800);
+            }, 1000); // Slightly longer for gentler transition
         });
     }
 }
 
 // ---- Initialize all features after cover opens ----
 function initializeApp() {
-    // Initialize AOS (Animate On Scroll)
+    // Initialize AOS (Animate On Scroll) — gentler settings
     if (typeof AOS !== 'undefined') {
         AOS.init({
-            duration: 800,
+            duration: 900,
             easing: 'ease-out-cubic',
             once: true,
-            offset: 50,
-            disable: 'mobile',
+            offset: 60,
+            disable: false, // Enable on mobile for the soft feel
         });
     }
 
@@ -133,14 +131,14 @@ function initializeApp() {
     initMusic();
     tryAutoPlay();
 
-    // Initialize scroll animations
+    // Initialize scroll animations (includes floating petals)
     initAnimations();
 
     // Setup forms (with guest pre-fill)
     setupForms();
 
-    // Setup navigation
-    setupNavigation();
+    // Setup bottom navigation
+    setupBottomNavigation();
 
     // Setup copy buttons
     setupCopyButtons();
@@ -156,6 +154,12 @@ function initializeApp() {
             guestCountInput.max = window.__weddingGuest.max_guests;
         }
     }
+
+    // Show bottom nav after a brief delay
+    setTimeout(() => {
+        const bottomNav = document.getElementById('bottom-nav');
+        if (bottomNav) bottomNav.classList.add('visible');
+    }, 500);
 }
 
 // ---- Forms ----
@@ -241,9 +245,9 @@ function setupForms() {
     }
 }
 
-// ---- Navigation ----
-function setupNavigation() {
-    const navItems = document.querySelectorAll('.nav-item');
+// ---- Bottom Navigation ----
+function setupBottomNavigation() {
+    const navItems = document.querySelectorAll('.nav-icon');
     const sections = document.querySelectorAll('.section');
 
     // Smooth scroll navigation
@@ -303,7 +307,7 @@ function setupCopyButtons() {
                     particleCount: 40,
                     spread: 60,
                     origin: { x, y },
-                    colors: ['#C9A84C', '#D4AF61', '#ffffff']
+                    colors: ['#AF9E8F', '#D4A5A5', '#A8B5A0']
                 });
             }
 

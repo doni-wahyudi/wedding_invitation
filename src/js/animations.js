@@ -1,31 +1,60 @@
 // ============================================
-// ANIMATIONS MODULE — Optimized for seamless scrolling
+// ANIMATIONS MODULE — Ivory Romance Theme
+// Soft, organic animations with floating petals
 // ============================================
 
 import gsap from 'gsap';
 
 // ---- Initialize Scroll Animations ----
 export function initAnimations() {
-    // Use Intersection Observer for scroll-triggered reveals
-    // This ensures elements animate ONLY when visible, not all at once
     setupScrollReveal();
-
-    // Animate countdown flip on number change
     setupCountdownFlip();
+    createFloatingPetals();
 }
 
+// ---- Floating Petals System ----
+function createFloatingPetals() {
+    const container = document.getElementById('petals-container');
+    if (!container) return;
 
+    const petalCount = 15; // Subtle, not overwhelming
+
+    for (let i = 0; i < petalCount; i++) {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+
+        // Random positioning and timing
+        const startX = Math.random() * 100;
+        const size = 6 + Math.random() * 10;
+        const duration = 12 + Math.random() * 18; // 12-30 seconds
+        const delay = Math.random() * 15;
+        const swayAmount = 30 + Math.random() * 60;
+
+        petal.style.cssText = `
+            left: ${startX}%;
+            width: ${size}px;
+            height: ${size}px;
+            animation-duration: ${duration}s;
+            animation-delay: ${delay}s;
+            opacity: 0;
+        `;
+
+        // Add gentle horizontal sway via CSS custom property
+        petal.style.setProperty('--sway', `${swayAmount}px`);
+
+        container.appendChild(petal);
+    }
+}
 
 // ---- Scroll-Triggered Reveal ----
 function setupScrollReveal() {
-    // Elements to reveal on scroll — with different animations
     const revealTargets = [
-        { selector: '.couple-card', animation: 'fadeUp', stagger: 0.15 },
+        { selector: '.couple-card', animation: 'fadeUp', stagger: 0.2 },
         { selector: '.divider-ornament', animation: 'scaleIn' },
-        { selector: '.countdown-item', animation: 'fadeUp', stagger: 0.1 },
-        { selector: '.event-card', animation: 'fadeUp', stagger: 0.15 },
-        { selector: '.timeline-item', animation: 'fadeUp', stagger: 0.12 },
-        { selector: '.gift-card', animation: 'fadeUp', stagger: 0.1 },
+        { selector: '.countdown-item', animation: 'fadeUp', stagger: 0.12 },
+        { selector: '.event-card', animation: 'fadeUp', stagger: 0.2 },
+        { selector: '.timeline-item', animation: 'fadeUp', stagger: 0.15 },
+        { selector: '.gift-card', animation: 'fadeUp', stagger: 0.12 },
         { selector: '.geometric-frame', animation: 'fadeUp' },
         { selector: '.closing-frame', animation: 'fadeUp' },
         { selector: '.rsvp-form', animation: 'fadeUp' },
@@ -36,7 +65,6 @@ function setupScrollReveal() {
         const elements = document.querySelectorAll(selector);
         if (elements.length === 0) return;
 
-        // Find the parent section for each group
         const parentSection = elements[0].closest('.section');
         if (!parentSection) return;
 
@@ -48,8 +76,8 @@ function setupScrollReveal() {
                 }
             });
         }, {
-            threshold: 0.15,
-            rootMargin: '0px 0px 50px 0px', // Trigger slightly BEFORE visible
+            threshold: 0.1,
+            rootMargin: '0px 0px 30px 0px',
         });
 
         observer.observe(parentSection);
@@ -59,15 +87,15 @@ function setupScrollReveal() {
 // ---- Animate Elements ----
 function animateElements(elements, animation, stagger = 0) {
     const baseConfig = {
-        duration: 0.5,       // Fast — no waiting feel
-        ease: 'power2.out',  // Smooth but quick
+        duration: 0.7,
+        ease: 'power2.out',
         stagger: stagger,
     };
 
     switch (animation) {
         case 'fadeUp':
             gsap.fromTo(elements, {
-                y: 25,
+                y: 30,
                 opacity: 0,
             }, {
                 y: 0,
@@ -79,12 +107,12 @@ function animateElements(elements, animation, stagger = 0) {
         case 'scaleIn':
             gsap.fromTo(elements, {
                 scale: 0,
-                rotation: -90,
+                rotation: -45,
             }, {
                 scale: 1,
                 rotation: 0,
-                duration: 0.6,
-                ease: 'back.out(1.5)',
+                duration: 0.8,
+                ease: 'back.out(1.2)',
             });
             break;
     }
@@ -95,7 +123,7 @@ function setupCountdownFlip() {
     const countdownFlips = document.querySelectorAll('.countdown-flip');
     countdownFlips.forEach(flip => {
         const observer = new MutationObserver(() => {
-            gsap.fromTo(flip, { scale: 0.95 }, { scale: 1, duration: 0.2, ease: 'back.out(2)' });
+            gsap.fromTo(flip, { scale: 0.95 }, { scale: 1, duration: 0.3, ease: 'back.out(1.5)' });
         });
 
         const numberEl = flip.querySelector('.countdown-number');
