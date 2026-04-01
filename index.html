@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="description"
     content="Undangan Pernikahan Doni & Despa - Kami mengundang Anda untuk merayakan hari bahagia kami" />
-  <meta name="theme-color" content="#0D4D2B" />
+  <meta name="theme-color" content="#AF9E8F" />
   <title>Undangan Pernikahan Doni & Despa</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Cardo:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
 
   <!-- AOS (Animate On Scroll) CDN -->
@@ -33,30 +33,47 @@
       width: 70px !important;
     }
     .walimatul-urs-icon {
-      width: 90px !important; /* Larger to compensate for internal whitespace */
+      width: 90px !important;
     }
   </style>
 </head>
 
 <body>
+  <!-- Floating Petals (global, always visible after cover opens) -->
+  <div class="petals-container" id="petals-container"></div>
+
   <!-- ========================================= -->
-  <!-- SECTION 0: OPENING COVER (ENVELOPE)       -->
+  <!-- SECTION 0: OPENING COVER                  -->
   <!-- ========================================= -->
   <section id="cover" class="section cover-section">
+    <!-- Background Image -->
+    <div class="cover-bg-image">
+      <img src="/images/cover_bg.png" alt="" />
+    </div>
     <div class="cover-overlay"></div>
-    <div class="particles" id="cover-particles"></div>
+
+    <!-- Floral Corners -->
+    <div class="cover-floral-top">
+      <img src="/images/floral_top.png" alt="" />
+    </div>
+    <div class="cover-floral-bottom">
+      <img src="/images/floral_bottom.png" alt="" />
+    </div>
+
     <div class="cover-content">
       <div class="islamic-ornament-top"></div>
       <p class="bismillah-small">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
       <h3 class="cover-subtitle">Pernikahan Dari</h3>
       <h1 class="cover-title">Doni<span class="ampersand">&</span>Despa</h1>
 
+      <p class="cover-date">10 . 06 . 2026</p>
+
       <div class="cover-guest">
         <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
         <p class="guest-name" id="guest-name">Tamu Undangan</p>
       </div>
       <button class="open-invitation-btn" id="open-btn">
-        <span>Buka Undangan</span>
+        <span>✉ Buka Undangan</span>
       </button>
       <div class="islamic-ornament-bottom"></div>
     </div>
@@ -98,7 +115,7 @@
         </h2>
 
         <!-- Bride -->
-        <div class="couple-card bride-card" data-aos="fade-right" data-aos-duration="800">
+        <div class="couple-card bride-card" data-aos="fade-up" data-aos-duration="800">
 
           <h3 class="couple-name">Despa Putri Lestari</h3>
           <p class="couple-parent">Putri dari<br />Bapak Paisal Yusip &<br />Ibu Enny Yusnida</p>
@@ -116,7 +133,7 @@
         </div>
 
         <!-- Groom -->
-        <div class="couple-card groom-card" data-aos="fade-left" data-aos-duration="800">
+        <div class="couple-card groom-card" data-aos="fade-up" data-aos-duration="800">
 
           <h3 class="couple-name">Doni Wahyudi</h3>
           <p class="couple-parent">Putra dari<br />Bapak Masdianto &<br />Ibu Desniati</p>
@@ -277,7 +294,7 @@
         <div class="timeline">
           <div class="timeline-line"></div>
 
-          <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">25 Nov 2025</span>
@@ -286,7 +303,7 @@
             </div>
           </div>
 
-          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="300">
+          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="300">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">24 Jan 2026</span>
@@ -295,7 +312,7 @@
             </div>
           </div>
 
-          <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">29 Jan 2026</span>
@@ -304,7 +321,7 @@
             </div>
           </div>
 
-          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="500">
+          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="500">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">7 Feb 2026</span>
@@ -313,7 +330,7 @@
             </div>
           </div>
 
-          <div class="timeline-item" data-aos="fade-right" data-aos-delay="600">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">27 Feb 2026</span>
@@ -322,7 +339,7 @@
             </div>
           </div>
 
-          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="700">
+          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="700">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">28 Mar 2026</span>
@@ -331,7 +348,7 @@
             </div>
           </div>
 
-          <div class="timeline-item" data-aos="fade-right" data-aos-delay="800">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">10 Juni 2026</span>
@@ -342,16 +359,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ========================================= -->
-    <!-- SECTION 7: PHOTO GALLERY                  -->
-    <!-- ========================================= -->
-
-
-    <!-- ========================================= -->
-    <!-- SECTION 8: WEDDING GIFTS                  -->
-    <!-- ========================================= -->
-
 
     <!-- ========================================= -->
     <!-- SECTION 9: RSVP                           -->
@@ -470,15 +477,28 @@
       <p class="footer-credits">© 2026 Doni & Despa</p>
     </footer>
 
-    <!-- Top Right Navigation -->
-    <nav class="top-nav" id="top-nav">
-      <div class="nav-menu" id="nav-menu">
-        <a href="#bismillah" class="nav-item active" data-section="bismillah">Beranda</a>
-        <a href="#event" class="nav-item" data-section="event">Acara</a>
-
-
-        <a href="#messages" class="nav-item" data-section="messages">Pesan</a>
-      </div>
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav" id="bottom-nav">
+      <a href="#bismillah" class="nav-icon active" data-section="bismillah">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="#couple" class="nav-icon" data-section="couple">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span>Mempelai</span>
+      </a>
+      <a href="#event" class="nav-icon" data-section="event">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Acara</span>
+      </a>
+      <a href="#story" class="nav-icon" data-section="story">
+        <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>Kisah</span>
+      </a>
+      <a href="#messages" class="nav-icon" data-section="messages">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>Pesan</span>
+      </a>
     </nav>
 
   </main>

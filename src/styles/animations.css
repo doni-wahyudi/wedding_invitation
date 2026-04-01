@@ -1,14 +1,38 @@
 /* ============================================
-   ANIMATIONS & TRANSITIONS
+   ANIMATIONS — IVORY ROMANCE THEME
+   Gentle, flowing, organic movements
    ============================================ */
 
-/* ---------- Envelope / Cover Animations ---------- */
+/* ---------- Gentle Fade In (cover elements) ---------- */
+@keyframes gentleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Cover Close ---------- */
+@keyframes coverFadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.95) translateY(-20px);
+    }
+}
+
+/* ---------- Fade In Variants ---------- */
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -18,9 +42,8 @@
 @keyframes fadeInDown {
     from {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(-20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -30,9 +53,8 @@
 @keyframes fadeInScale {
     from {
         opacity: 0;
-        transform: scale(0.8);
+        transform: scale(0.9);
     }
-
     to {
         opacity: 1;
         transform: scale(1);
@@ -44,219 +66,126 @@
         transform: translateY(100%);
         opacity: 0;
     }
-
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-@keyframes coverClose {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    to {
-        opacity: 0;
-        transform: scale(0.9) translateY(-30px);
-    }
-}
-
-/* ---------- Floating / Particle Animations ---------- */
-@keyframes float {
-
-    0%,
-    100% {
+/* ---------- Floating Animations ---------- */
+@keyframes floatGentle {
+    0%, 100% {
         transform: translateY(0) rotate(0deg);
     }
-
     25% {
-        transform: translateY(-15px) rotate(2deg);
+        transform: translateY(-8px) rotate(1deg);
     }
-
     50% {
-        transform: translateY(-8px) rotate(-1deg);
+        transform: translateY(-4px) rotate(-0.5deg);
     }
-
     75% {
-        transform: translateY(-20px) rotate(1deg);
+        transform: translateY(-12px) rotate(0.5deg);
     }
 }
 
 @keyframes floatSlow {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0) translateX(0);
     }
-
     33% {
-        transform: translateY(-10px) translateX(5px);
+        transform: translateY(-6px) translateX(3px);
     }
-
     66% {
-        transform: translateY(-5px) translateX(-3px);
+        transform: translateY(-3px) translateX(-2px);
     }
 }
 
-@keyframes sparkle {
-
-    0%,
-    100% {
-        opacity: 0;
-        transform: scale(0);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes particleDrift {
+/* ---------- Petal Fall ---------- */
+@keyframes petalFall {
     0% {
-        transform: translateY(0) translateX(0) rotate(0deg);
         opacity: 0;
+        transform: translateY(-20px) translateX(0) rotate(0deg) scale(0.8);
     }
-
     10% {
-        opacity: 1;
+        opacity: 0.6;
     }
-
+    50% {
+        opacity: 0.4;
+        transform: translateY(50vh) translateX(40px) rotate(180deg) scale(0.6);
+    }
     90% {
-        opacity: 1;
+        opacity: 0.2;
     }
-
     100% {
-        transform: translateY(-100vh) translateX(50px) rotate(360deg);
         opacity: 0;
+        transform: translateY(100vh) translateX(80px) rotate(360deg) scale(0.3);
     }
 }
 
-/* ---------- Shimmer / Glow ---------- */
-@keyframes shimmer {
+@keyframes petalSway {
     0% {
-        background-position: -200% center;
+        transform: translateX(0);
     }
-
-    100% {
-        background-position: 200% center;
+    25% {
+        transform: translateX(15px);
     }
-}
-
-@keyframes glow {
-
-    0%,
-    100% {
-        box-shadow: 0 0 5px var(--gold-alpha-40);
-    }
-
     50% {
-        box-shadow: 0 0 20px var(--gold-alpha-40), 0 0 40px rgba(201, 168, 76, 0.15);
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(8px);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
-@keyframes pulseGlow {
-
-    0%,
-    100% {
-        opacity: 0.5;
+/* ---------- Soft Pulse ---------- */
+@keyframes softPulse {
+    0%, 100% {
+        opacity: 0.6;
     }
-
     50% {
         opacity: 1;
     }
 }
 
-/* ---------- Flip Counter ---------- */
-@keyframes flipTop {
-    from {
-        transform: rotateX(0deg);
+@keyframes gentleGlow {
+    0%, 100% {
+        box-shadow: 0 2px 15px rgba(175, 158, 143, 0.15);
     }
-
-    to {
-        transform: rotateX(-90deg);
-    }
-}
-
-@keyframes flipBottom {
-    from {
-        transform: rotateX(90deg);
-    }
-
-    to {
-        transform: rotateX(0deg);
+    50% {
+        box-shadow: 0 4px 25px rgba(175, 158, 143, 0.25);
     }
 }
 
 /* ---------- Music Visualizer ---------- */
 @keyframes musicBar1 {
-
-    0%,
-    100% {
-        height: 4px;
-    }
-
-    50% {
-        height: 16px;
-    }
+    0%, 100% { height: 4px; }
+    50% { height: 16px; }
 }
 
 @keyframes musicBar2 {
-
-    0%,
-    100% {
-        height: 8px;
-    }
-
-    50% {
-        height: 20px;
-    }
+    0%, 100% { height: 8px; }
+    50% { height: 20px; }
 }
 
 @keyframes musicBar3 {
-
-    0%,
-    100% {
-        height: 6px;
-    }
-
-    50% {
-        height: 14px;
-    }
+    0%, 100% { height: 6px; }
+    50% { height: 14px; }
 }
 
 @keyframes musicBar4 {
-
-    0%,
-    100% {
-        height: 10px;
-    }
-
-    50% {
-        height: 18px;
-    }
-}
-
-/* ---------- Ornament Rotation ---------- */
-@keyframes rotateOrn {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    0%, 100% { height: 10px; }
+    50% { height: 18px; }
 }
 
 /* ---------- Slide In ---------- */
 @keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateX(-40px);
+        transform: translateX(-30px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
@@ -266,9 +195,8 @@
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(40px);
+        transform: translateX(30px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
@@ -279,33 +207,30 @@
 @keyframes bounceIn {
     0% {
         opacity: 0;
-        transform: scale(0.3);
+        transform: scale(0.5);
     }
-
-    50% {
-        transform: scale(1.05);
+    60% {
+        transform: scale(1.03);
     }
-
-    70% {
-        transform: scale(0.95);
+    80% {
+        transform: scale(0.98);
     }
-
     100% {
         opacity: 1;
         transform: scale(1);
     }
 }
 
-@keyframes bounceArrow {
+/* ---------- Ornament ---------- */
+@keyframes rotateOrn {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(8px);
-    }
+/* ---------- Shimmer ---------- */
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
 }
 
 /* ---------- Utility Classes ---------- */
@@ -322,28 +247,15 @@
 }
 
 .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: floatGentle 6s ease-in-out infinite;
 }
 
 .animate-floatSlow {
     animation: floatSlow 8s ease-in-out infinite;
 }
 
-.animate-shimmer {
-    background: linear-gradient(90deg,
-            transparent 25%,
-            var(--gold-alpha-20) 50%,
-            transparent 75%);
-    background-size: 200% 100%;
-    animation: shimmer 3s infinite;
-}
-
-.animate-glow {
-    animation: glow 2s ease-in-out infinite;
-}
-
-.animate-bounce {
-    animation: bounceArrow 1.5s ease-in-out infinite;
+.animate-gentleGlow {
+    animation: gentleGlow 3s ease-in-out infinite;
 }
 
 /* ---------- Particle Container ---------- */
@@ -359,46 +271,40 @@
     position: absolute;
     width: 6px;
     height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    animation: particleDrift linear infinite;
+    background: var(--dusty-rose-light);
+    border-radius: 50% 0 50% 50%;
+    animation: petalFall linear infinite;
     opacity: 0;
 }
 
-.particle.star {
+.particle.leaf {
     width: 8px;
     height: 8px;
-    background: none;
-    border: none;
-}
-
-.particle.star::before {
-    content: '✦';
-    color: var(--gold-light);
-    font-size: 10px;
+    background: var(--sage-light);
+    border-radius: 50%;
 }
 
 /* ---------- Stagger delays ---------- */
-.stagger-1 {
-    animation-delay: 0s;
+.stagger-1 { animation-delay: 0s; }
+.stagger-2 { animation-delay: 0.15s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.45s; }
+.stagger-5 { animation-delay: 0.6s; }
+.stagger-6 { animation-delay: 0.75s; }
+
+/* ---------- AOS Overrides for smoother feel ---------- */
+[data-aos] {
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1) !important;
 }
 
-.stagger-2 {
-    animation-delay: 0.1s;
+[data-aos="fade-up"] {
+    transform: translateY(25px);
 }
 
-.stagger-3 {
-    animation-delay: 0.2s;
+[data-aos="fade-right"] {
+    transform: translateX(-20px);
 }
 
-.stagger-4 {
-    animation-delay: 0.3s;
-}
-
-.stagger-5 {
-    animation-delay: 0.4s;
-}
-
-.stagger-6 {
-    animation-delay: 0.5s;
+[data-aos="fade-left"] {
+    transform: translateX(20px);
 }
