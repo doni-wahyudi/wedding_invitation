@@ -315,6 +315,8 @@ function setupCopyButtons() {
             const textSpan = btn.querySelector('.copy-text');
             const originalText = textSpan.textContent;
             textSpan.textContent = 'Tersalin!';
+            showToast('✨ Nomor Rekening Tersalin!');
+            
             setTimeout(() => {
                 btn.classList.remove('copied');
                 textSpan.textContent = originalText;
@@ -337,3 +339,33 @@ function setupCopyButtons() {
         }
     };
 }
+
+// ---- Toast Notification ----
+window.showToast = function(message) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+    
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = message;
+    
+    container.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.classList.add('fade-out');
+        setTimeout(() => toast.remove(), 400); // Wait for fade-out animation
+    }, 3000);
+};
+
+// ---- Preloader ----
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800);
+        }, 500); // 500ms guaranteed minimum display
+    }
+});

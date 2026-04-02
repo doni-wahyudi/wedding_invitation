@@ -8,6 +8,7 @@
     content="Undangan Pernikahan Doni & Despa - Kami mengundang Anda untuk merayakan hari bahagia kami" />
   <meta name="theme-color" content="#AF9E8F" />
   <title>Undangan Pernikahan Doni & Despa</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,6 +40,14 @@
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <img src="/favicon.svg" alt="D&D" class="preloader-logo" />
+      <div class="preloader-pulse"></div>
+    </div>
+  </div>
+
   <!-- Floating Petals (global, always visible after cover opens) -->
   <div class="petals-container" id="petals-container"></div>
 
@@ -232,6 +241,7 @@
                 <span>Masjid Al-Mukarromah<br />XQCJ+385, Kerbang Dalam, Kec. Pesisir Utara, Kabupaten Lampung Barat</span>
               </div>
             </div>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Doni+dan+Despa&dates=20260610T080000/20260610T100000&ctz=Asia/Jakarta&details=Perayaan+Akad+Nikah&location=Masjid+Al-Mukarromah" target="_blank" rel="noopener" class="calendar-btn">Simpan ke Kalender</a>
           </div>
 
           <!-- Walimatul Urs -->
@@ -261,6 +271,7 @@
                 <span>Masjid Al-Mukarromah<br />XQCJ+385, Kerbang Dalam, Kec. Pesisir Utara, Kabupaten Lampung Barat</span>
               </div>
             </div>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Walimatul+Urs+Doni+dan+Despa&dates=20260610T110000/20260610T140000&ctz=Asia/Jakarta&details=Perayaan+Resepsi+Pernikahan&location=Masjid+Al-Mukarromah" target="_blank" rel="noopener" class="calendar-btn">Simpan ke Kalender</a>
           </div>
         </div>
       </div>
@@ -309,22 +320,13 @@
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <span class="timeline-date">25 Nov 2025</span>
-              <h4 class="timeline-title">Awal Kisah</h4>
-              <p class="timeline-desc">Sebuah kabar baik datang dari seorang teman, membawa secercah harapan tentang sosok yang juga tengah mencari pendamping hidup. Menjadi awal dari skenario indah yang Allah persiapkan.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="300">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
               <span class="timeline-date">24 Jan 2026</span>
               <h4 class="timeline-title">Niat yang Tulus</h4>
               <p class="timeline-desc">Melalui perantara, niat suci untuk saling mengenal secara ta'aruf disampaikan. Sebuah langkah awal yang penuh doa dan harapan akan ridho-Nya.</p>
             </div>
           </div>
 
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="300">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">29 Jan 2026</span>
@@ -333,7 +335,7 @@
             </div>
           </div>
 
-          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="500">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">7 Feb 2026</span>
@@ -342,7 +344,7 @@
             </div>
           </div>
 
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="500">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">27 Feb 2026</span>
@@ -351,7 +353,7 @@
             </div>
           </div>
 
-          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="700">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">28 Mar 2026</span>
@@ -360,7 +362,7 @@
             </div>
           </div>
 
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
+          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="700">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <span class="timeline-date">10 Juni 2026</span>
@@ -514,6 +516,8 @@
     </nav>
 
   </main>
+
+  <div id="toast-container" class="toast-container"></div>
 
   <!-- Kontrol Musik -->
   <button class="music-toggle" id="music-toggle" title="Putar Musik">
